@@ -1,0 +1,93 @@
+article { margin: 0px 1em; }
+
+button {
+    border: 1px solid black;
+    border-radius: 3px;
+    margin-right: .5em;
+}
+
+nav > ul {
+    padding: 0px;
+}
+
+/* design for vertical layout */
+nav > ul > li {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+button.nav {
+    width: 100%;
+    font-size: 150%;
+    font-weight: bold;
+}
+
+.dropContent button {
+    width: 100%;
+    font-size: 150%;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* mostly following W3 schools for these styles */
+
+.dropButton {
+    background-color: #3498db;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 150%;
+    text-align: center;
+}
+
+.dropButton:hover, .dropButton:focus {
+    background-color: #2980B9;
+}
+
+.dropContent, .dropClickContent {
+    position: absolute;
+    z-index: 1;
+    display: none;
+    background-color: rgb(190,220,247);
+    font-size: 120%;
+    border: 1px solid black;
+}
+
+.show {
+    display: block;
+}
+/*
+.task{
+    margin-left: 3em;
+}
+*/
+
+#addTask {
+    border: 2px solid green;
+    background-color: #cfc;
+}
+
+/* we give it rows and columns but don't let it get too wide. */
+
+#addTask textarea {
+    max-width: 100%;
+}
+
+.template { display: none; }
+
+.done { opacity: 0.5; border-style: dotted; }
+
+ul {
+    list-style-type: none;
+}
+
+/* horizontal bar when they all fit */
+
+@media all and (min-width: 20em) {
+    nav > ul > li {
+	width: 25%;
+    }
+}
